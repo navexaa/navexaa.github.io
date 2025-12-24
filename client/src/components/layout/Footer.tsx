@@ -1,12 +1,12 @@
+import whiteLogo from "@assets/Navexaa_logo_design_Transparent_White_1766580087033.png";
+
 export default function Footer() {
   return (
     <footer className="bg-primary text-white py-12 border-t border-white/10">
       <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-8">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl font-serif font-bold tracking-tight text-white mb-2">
-              Navexaa<span className="text-accent">.</span>
-            </h2>
+            <img src={whiteLogo} alt="Navexaa" className="h-10 mb-4" />
             <p className="text-gray-400 text-sm max-w-xs">
               Collaborate. Execute. Move forward with confidence.
             </p>
