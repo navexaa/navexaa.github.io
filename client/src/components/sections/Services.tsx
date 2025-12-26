@@ -4,33 +4,33 @@ import { Check } from "lucide-react";
 
 const services = [
   {
+    title: "Fractional CFO Services",
+    description: "High-level financial leadership without the full-time cost.",
+    items: [
+      "Financial Planning & Analysis",
+      "MIS reporting",
+      "Working capital optimisation",
+      "Accounting and compliance support"
+    ]
+  },
+  {
     title: "Management Consulting",
     description: "Driving operational excellence and strategic clarity.",
     items: [
-      "Finance transformation",
-      "Growth and business strategy",
-      "Process optimisation",
-      "PMO and execution support"
+      "Profit maximisation strategy",
+      "Corporate strategy & growth advisory",
+      "AI & automation advisory",
+      "Supply chain optimisation"
     ]
   },
   {
     title: "Core Finance Services",
     description: "Building the financial backbone for fundraising and valuation.",
     items: [
-      "Pitch deck creation",
-      "Financial modelling",
-      "Business valuation",
-      "End-to-end fundraising support (equity and debt)"
-    ]
-  },
-  {
-    title: "Fractional CFO Services",
-    description: "High-level financial leadership without the full-time cost.",
-    items: [
-      "Strategic FP&A",
-      "MIS reporting and dashboards",
-      "Working capital optimisation",
-      "Financial governance and decision support"
+      "Fundraising support (Debt & Equity)",
+      "Pitch deck & Financial Modelling",
+      "Valuation & Due Diligence services",
+      "Deal structuring services"
     ]
   }
 ];
