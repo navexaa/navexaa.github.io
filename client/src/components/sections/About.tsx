@@ -20,26 +20,27 @@ export default function About() {
               viewport={{ once: true }}
               className="inline-block px-4 py-1 border border-accent/30 rounded-full mb-4 bg-accent/5"
             >
-              <span className="text-xs font-semibold tracking-widest text-accent uppercase">Why Navexaa</span>
+              <span className="text-xs font-semibold tracking-widest text-accent uppercase">About Us</span>
             </motion.div>
             <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight">
-              Bridging the gap between <span className="text-accent">Strategy</span> and <span className="text-accent">Execution</span>.
+              Unlocking Value. Building Foundations.
             </h3>
-            <p className="text-gray-300 text-lg mb-6 leading-relaxed">
-              Navexaa Advisors LLP was founded to help businesses unlock value and build strong financial foundations for sustainable growth. We work closely with founders, CXOs, and investors to deliver actionable insights and measurable outcomes.
-            </p>
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              With a background in Big-4 consulting and senior finance roles, we bring institutional-grade rigor with the agility required for high-growth companies.
-            </p>
+            <div className="space-y-6 text-gray-300 text-lg leading-relaxed">
+              <p>
+                Navexaa is founded to help businesses unlock value and build strong financial foundations for sustainable growth. We partner closely with founders, CXOs, and investors to deliver clear, actionable insights and measurable outcomes.
+              </p>
+              <p>
+                Our work is shaped by a unique combination of deep, hands-on industry experience and modern advisory practices. We draw on decades of leadership and operational exposure across established businesses, alongside contemporary consulting and financial advisory experience gained at leading global firms.
+              </p>
+              <p>
+                We start with a clear understanding of client objectives, design solutions aligned to business context, and support execution across finance, operations, and technology. The result is advice that is practical, relevant, and designed to stand the test of time.
+              </p>
+            </div>
             
-            <div className="grid grid-cols-2 gap-8 mb-8">
+            <div className="grid grid-cols-2 gap-8 mt-12">
               <div>
-                <h4 className="text-3xl font-serif font-bold text-accent mb-2">10+</h4>
-                <p className="text-sm text-gray-400">Years Experience</p>
-              </div>
-              <div>
-                <h4 className="text-3xl font-serif font-bold text-accent mb-2">100%</h4>
-                <p className="text-sm text-gray-400">Client Commitment</p>
+                <h4 className="text-3xl font-serif font-bold text-accent mb-2">75+</h4>
+                <p className="text-sm text-gray-400">Combined Years of Experience</p>
               </div>
             </div>
           </motion.div>
