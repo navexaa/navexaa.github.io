@@ -31,7 +31,7 @@ export default function Team() {
     <section id="team" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Our Expertise</h2>
+          <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Our Team</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Led by Industry Professionals</h3>
           <p className="text-muted-foreground text-lg">
             Our team brings together institutional-grade rigor from Big-4 and top-tier advisory backgrounds.
