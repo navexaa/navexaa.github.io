@@ -28,7 +28,7 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-24 bg-white">
+    <section id="team" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Our Expertise</h2>
@@ -47,7 +47,7 @@ export default function Team() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 rounded-sm overflow-hidden group">
+              <Card className="h-full border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 rounded-sm overflow-hidden group bg-white">
                 <div className="aspect-square overflow-hidden bg-gray-100">
                   <img 
                     src={member.image} 

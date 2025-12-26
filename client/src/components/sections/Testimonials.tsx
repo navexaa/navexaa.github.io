@@ -38,7 +38,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-secondary/20 overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Client Stories</h2>
@@ -66,7 +66,7 @@ export default function Testimonials() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="h-full"
                   >
-                    <Card className="h-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-sm bg-white">
+                    <Card className="h-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-sm bg-secondary/20">
                       <CardContent className="p-8">
                         <div className="flex gap-1 mb-4">
                           {[...Array(testimonial.rating)].map((_, i) => (

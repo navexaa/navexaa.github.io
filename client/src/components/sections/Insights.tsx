@@ -25,7 +25,7 @@ const insights = [
 
 export default function Insights() {
   return (
-    <section id="insights" className="py-24 bg-secondary/10">
+    <section id="insights" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Our Insights</h2>

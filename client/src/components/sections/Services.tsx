@@ -56,7 +56,7 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full border-none shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-sm bg-secondary/30">
+              <Card className="h-full border-none shadow-md hover:shadow-lg transition-shadow duration-300 rounded-sm bg-secondary/40">
                 <CardHeader className="pb-4">
                   <div className="w-12 h-1 bg-accent mb-6" />
                   <CardTitle className="text-2xl font-serif text-primary">{service.title}</CardTitle>
