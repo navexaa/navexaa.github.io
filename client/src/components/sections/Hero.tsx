@@ -35,8 +35,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl"
           >
-            We don’t just advise. We collaborate, execute, and help you move forward with confidence. 
-            Strategic financial advisory and management consulting for high-growth businesses.
+            We collaborate, execute and help you move forward with confidence. We partner with businesses and founders to build financial clarity and execute with discipline.
           </motion.p>
 
           <motion.div 
