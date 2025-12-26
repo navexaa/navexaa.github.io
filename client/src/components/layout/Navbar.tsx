@@ -20,20 +20,17 @@ export default function Navbar() {
   const navLinks = [
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
+    { name: "Team", href: "#team" },
+    { name: "Insights", href: "#insights" },
     { name: "Contact", href: "#contact" },
-    { name: "Newsletters", href: "mailto:info@navexaa.com?subject=Subscribe to Newsletters" },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    if (href.startsWith("mailto:")) {
-      window.location.href = href;
-    } else {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        setIsMobileMenuOpen(false);
-      }
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsMobileMenuOpen(false);
     }
   };
 
