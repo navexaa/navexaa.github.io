@@ -1,26 +1,38 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
+import namanImg from '@assets/generated_images/professional_portrait_of_naman_agrawal.png';
 
 const teamMembers = [
   {
-    name: "Founder Name",
-    role: "Managing Partner",
-    bio: "Ex-Big 4 professional with over 15 years of experience in management consulting and financial advisory. Specializes in growth strategy and finance transformation.",
+    name: "Naman Agrawal",
+    role: "Partner",
+    degree: "CA, CFA",
+    bio: "Ex-Big 4 professional with over 7 years of diverse work experience in consulting and financial advisory. Led multiple engagements in areas like fundraising, finance transformation, finance due diligence, cost optimization, etc. for global clients in sectors like auto ancillary, consumer durables, hospitality, etc.",
+    image: namanImg,
+    linkedin: "#"
+  },
+  {
+    name: "Prerit Goel",
+    role: "Partner",
+    degree: "CA",
+    bio: "Expert in corporate finance and strategic planning with extensive experience in managing large-scale financial operations and advisory projects.",
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200&h=200",
     linkedin: "#"
   },
   {
-    name: "Partner Name",
-    role: "Senior Partner",
-    bio: "Strategic finance leader with a background in private equity and investment banking. Expert in business valuation and fundraising support.",
+    name: "Coming Soon",
+    role: "Leadership",
+    degree: "",
+    bio: "We are constantly expanding our leadership team with industry veterans and domain experts.",
     image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
     linkedin: "#"
   },
   {
-    name: "Advisor Name",
-    role: "Consultant",
-    bio: "Operations expert focusing on process optimization and PMO support. Helps businesses build efficient financial foundations.",
+    name: "Coming Soon",
+    role: "Leadership",
+    degree: "",
+    bio: "Join our mission to enable transformation and drive sustainable growth for businesses globaly.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
     linkedin: "#"
   }
@@ -31,7 +43,6 @@ export default function Team() {
     <section id="team" className="py-24 bg-primary text-white relative overflow-hidden">
       {/* Background Design Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Subtle grid with perspective */}
         <div className="absolute inset-0 opacity-[0.05]" 
              style={{ 
                backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
@@ -39,7 +50,6 @@ export default function Team() {
                maskImage: 'radial-gradient(circle at 50% 50%, black, transparent 80%)'
              }} />
         
-        {/* Floating geometric shapes */}
         <motion.div 
           animate={{ 
             rotate: 360,
@@ -72,7 +82,7 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {teamMembers.map((member, index) => (
             <motion.div
               key={index}
@@ -81,11 +91,10 @@ export default function Team() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="h-full border border-white/10 shadow-sm hover:shadow-2xl hover:border-accent/40 transition-all duration-500 rounded-sm overflow-hidden group bg-[#0c1a32]/50 backdrop-blur-xl relative">
-                {/* Individual card accent */}
+              <Card className="h-full border border-white/10 shadow-sm hover:shadow-2xl hover:border-accent/40 transition-all duration-500 rounded-sm overflow-hidden group bg-[#0c1a32]/50 backdrop-blur-xl relative flex flex-col">
                 <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-accent/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="aspect-square overflow-hidden bg-white/10 relative">
+                <div className="aspect-[4/5] overflow-hidden bg-white/10 relative">
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
                   <img 
                     src={member.image} 
@@ -94,13 +103,16 @@ export default function Team() {
                   />
                 </div>
                 <CardHeader className="pb-2 relative z-20">
-                  <CardTitle className="text-xl font-serif text-white group-hover:text-accent transition-colors duration-300">{member.name}</CardTitle>
-                  <p className="text-accent text-xs font-semibold uppercase tracking-widest mt-1">{member.role}</p>
+                  <CardTitle className="text-lg font-serif text-white group-hover:text-accent transition-colors duration-300">{member.name}</CardTitle>
+                  <div className="flex flex-col gap-0.5 mt-1">
+                    <p className="text-accent text-[10px] font-semibold uppercase tracking-widest">{member.role}</p>
+                    {member.degree && <p className="text-gray-400 text-[10px] font-medium">{member.degree}</p>}
+                  </div>
                 </CardHeader>
-                <CardContent className="relative z-20">
-                  <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-4">{member.bio}</p>
-                  <a href={member.linkedin} className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300">
-                    <Linkedin size={18} />
+                <CardContent className="relative z-20 flex-grow">
+                  <p className="text-gray-400 text-xs mb-6 leading-relaxed line-clamp-[8]">{member.bio}</p>
+                  <a href={member.linkedin} className="absolute bottom-6 left-6 inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300">
+                    <Linkedin size={14} />
                   </a>
                 </CardContent>
               </Card>
