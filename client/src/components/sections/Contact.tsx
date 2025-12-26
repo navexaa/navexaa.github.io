@@ -18,6 +18,7 @@ import { useToast } from "@/hooks/use-toast";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is required." }),
   email: z.string().email({ message: "Invalid email address." }),
+  phone: z.string().min(10, { message: "Please enter a valid phone number." }),
   company: z.string().optional(),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
@@ -29,6 +30,7 @@ export default function Contact() {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       company: "",
       message: "",
     },
@@ -85,19 +87,34 @@ export default function Contact() {
                   )}
                 />
               </div>
-              <FormField
-                control={form.control}
-                name="company"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormLabel className="text-primary font-medium">Company (Optional)</FormLabel>
-                    <FormControl>
-                      <Input placeholder="Your Company Name" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+              <div className="grid md:grid-cols-2 gap-6">
+                <FormField
+                  control={form.control}
+                  name="phone"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-primary font-medium">Phone Number</FormLabel>
+                      <FormControl>
+                        <Input placeholder="+91 98765 43210" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="company"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-primary font-medium">Company (Optional)</FormLabel>
+                      <FormControl>
+                        <Input placeholder="Your Company Name" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
               <FormField
                 control={form.control}
                 name="message"
