@@ -67,7 +67,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-primary font-medium">Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
+                        <Input placeholder="Full name" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -80,7 +80,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-primary font-medium">Email</FormLabel>
                       <FormControl>
-                        <Input placeholder="john@company.com" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
+                        <Input placeholder="Official mail address" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -95,7 +95,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-primary font-medium">Phone Number</FormLabel>
                       <FormControl>
-                        <Input placeholder="+91 98765 43210" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
+                        <Input placeholder="Your mobile number" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -108,7 +108,7 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel className="text-primary font-medium">Company (Optional)</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Company Name" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
+                        <Input placeholder="Your organization name" className="bg-white rounded-none h-12 border-gray-200 focus-visible:ring-primary" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -123,7 +123,7 @@ export default function Contact() {
                     <FormLabel className="text-primary font-medium">Message</FormLabel>
                     <FormControl>
                       <Textarea 
-                        placeholder="Tell us about your business needs..." 
+                        placeholder="Tell us how we can help you..." 
                         className="bg-white rounded-none min-h-[150px] border-gray-200 focus-visible:ring-primary resize-none" 
                         {...field} 
                       />
