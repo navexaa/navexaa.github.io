@@ -20,7 +20,7 @@ export default function About() {
           <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
             Enablers of Transformation
           </h3>
-          <p className="text-accent text-lg md:text-xl font-medium italic">
+          <p className="text-gray-400 text-lg">
             Expanding perspective, grounded in priorities.
           </p>
         </div>
