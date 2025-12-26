@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -41,7 +40,7 @@ export default function Testimonials() {
     <section className="py-24 bg-white overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Client Stories</h2>
+          <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Client Success Stories</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Trusted by Leading Businesses</h3>
           <p className="text-muted-foreground text-lg">
             Hear from founders and executives who have partnered with us to drive growth and build stronger financial foundations.
@@ -68,12 +67,6 @@ export default function Testimonials() {
                   >
                     <Card className="h-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-sm bg-secondary/20">
                       <CardContent className="p-8">
-                        <div className="flex gap-1 mb-4">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                          ))}
-                        </div>
-                        
                         <p className="text-muted-foreground mb-6 text-base leading-relaxed italic">
                           "{testimonial.content}"
                         </p>
