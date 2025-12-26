@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 
 export default function About() {
   return (
@@ -15,7 +14,14 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Why Navexaa</h2>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="inline-block px-4 py-1 border border-accent/30 rounded-full mb-4 bg-accent/5"
+            >
+              <span className="text-xs font-semibold tracking-widest text-accent uppercase">Why Navexaa</span>
+            </motion.div>
             <h3 className="text-3xl md:text-4xl font-serif font-bold mb-6 leading-tight">
               Bridging the gap between <span className="text-accent">Strategy</span> and <span className="text-accent">Execution</span>.
             </h3>

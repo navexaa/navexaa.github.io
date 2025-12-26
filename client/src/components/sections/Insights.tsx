@@ -62,14 +62,12 @@ export default function Insights() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 mb-4"
+            className="inline-block px-4 py-1 border border-accent/30 rounded-full mb-4 bg-accent/5"
           >
-            <div className="h-[1px] w-8 bg-accent/50" />
-            <span className="text-xs font-bold text-accent uppercase tracking-[0.2em]">Our Insights</span>
-            <div className="h-[1px] w-8 bg-accent/50" />
+            <span className="text-xs font-semibold tracking-widest text-accent uppercase">Our Insights</span>
           </motion.div>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">Expert Perspectives</h3>
           <p className="text-gray-400 text-lg">
