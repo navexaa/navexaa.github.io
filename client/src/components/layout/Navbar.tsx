@@ -22,7 +22,6 @@ export default function Navbar() {
     { name: "Services", href: "#services" },
     { name: "Team", href: "#team" },
     { name: "Insights", href: "#insights" },
-    { name: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
