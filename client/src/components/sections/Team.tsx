@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
 import namanImg from '@assets/generated_images/professional_portrait_of_naman_agrawal.png';
+import preritImg from '@assets/generated_images/professional_portrait_of_prerit_goel.png';
 
 const teamMembers = [
   {
@@ -15,9 +16,9 @@ const teamMembers = [
   {
     name: "Prerit Goel",
     role: "Partner",
-    degree: "CA",
-    bio: "Expert in corporate finance and strategic planning with extensive experience in managing large-scale financial operations and advisory projects.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=200&h=200",
+    degree: "CA, LLB",
+    bio: "With over 6 years of work experience in Big 4 and domestic firm, he has led consultancy on GCC optimization & automation, Ind AS adoption and legal matters to clients across sectors like fintech, OEMs, media, advertising, etc.",
+    image: preritImg,
     linkedin: "#"
   },
   {
@@ -32,7 +33,7 @@ const teamMembers = [
     name: "Coming Soon",
     role: "Leadership",
     degree: "",
-    bio: "Join our mission to enable transformation and drive sustainable growth for businesses globaly.",
+    bio: "Join our mission to enable transformation and drive sustainable growth for businesses globally.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
     linkedin: "#"
   }
