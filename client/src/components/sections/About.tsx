@@ -17,7 +17,7 @@ export default function About() {
           >
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">About Us</span>
           </motion.div>
-          <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
+          <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">
             Enablers of Transformation
           </h3>
           <p className="text-gray-400 text-lg">
