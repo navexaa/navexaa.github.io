@@ -4,7 +4,6 @@ import goldenLogo from "@assets/Navexaa_logo_design_Transparent_Golden_colour_17
 export default function Footer() {
   return (
     <footer className="bg-primary text-white py-16 border-t border-white/10 relative overflow-hidden">
-      {/* Subtle Design Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -bottom-24 -left-24 w-64 h-64 border border-white/5 rounded-full" />
         <div className="absolute top-12 right-12 w-32 h-32 bg-accent/5 blur-3xl rounded-full" />
@@ -50,13 +49,14 @@ export default function Footer() {
           <div>
             <h4 className="font-serif font-bold text-lg text-accent mb-6">Contact Us</h4>
             <div className="space-y-4">
-              <a 
-                href="tel:+919650900443" 
-                className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-3"
-              >
-                <Phone size={18} className="text-accent" />
-                +91-9650900443 / +91-9910311681
-              </a>
+              <div className="flex items-center gap-3">
+                <Phone size={18} className="text-accent shrink-0" />
+                <div className="flex flex-wrap gap-x-2 text-gray-400 text-sm">
+                  <a href="tel:+919650900443" className="hover:text-white transition-colors">+91-9650900443</a>
+                  <span>/</span>
+                  <a href="tel:+919910311681" className="hover:text-white transition-colors">+91-9910311681</a>
+                </div>
+              </div>
               <a 
                 href="mailto:info@navexaa.com" 
                 className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-3"
@@ -71,18 +71,16 @@ export default function Footer() {
           <div>
             <h4 className="font-serif font-bold text-lg text-accent mb-6">Address</h4>
             <div className="flex items-start gap-3">
+              <MapPin size={18} className="text-accent shrink-0 mt-1" />
               <a 
                 href="https://share.google/rauIQyYjKD177v9MR" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-accent hover:text-white transition-colors shrink-0 mt-1"
+                className="text-gray-400 hover:text-white transition-colors text-sm leading-relaxed"
               >
-                <MapPin size={18} />
-              </a>
-              <p className="text-gray-400 text-sm leading-relaxed">
                 310-311, 3rd Floor, Tower A, Nextra The Address,<br />
                 Mayur Vihar Extension, New Delhi - 110091
-              </p>
+              </a>
             </div>
           </div>
         </div>

@@ -42,13 +42,13 @@ export default function Testimonials() {
           <Carousel
             opts={{
               align: "start",
-              loop: false,
+              loop: true,
             }}
             className="w-full"
           >
             <CarouselContent className="-ml-4 flex items-stretch">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 flex">
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2 flex">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

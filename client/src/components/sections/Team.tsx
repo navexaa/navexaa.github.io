@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
-import namanImg from '@assets/Naman_Agrawal_1766820822630.PNG';
-import preritImg from '@assets/Prerit_Goel_1766820806214.PNG';
+import namanImg from '@assets/Naman_Agrawal_1766822836976.PNG';
+import preritImg from '@assets/Prerit_Goel_1766822836976.PNG';
 
 const teamMembers = [
   {
@@ -42,7 +42,6 @@ const teamMembers = [
 export default function Team() {
   return (
     <section id="team" className="py-24 bg-primary text-white relative overflow-hidden">
-      {/* Background Design Elements - Made More Visible */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 opacity-[0.1]" 
              style={{ 
@@ -100,7 +99,7 @@ export default function Team() {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 ${index < 2 ? 'object-[center_bottom]' : ''}`}
+                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 ${index < 2 ? 'object-top' : ''}`}
                   />
                 </div>
                 <CardHeader className="pb-2 relative z-20">
