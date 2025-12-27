@@ -63,7 +63,7 @@ export default function Team() {
             rotate: -360,
             transition: { duration: 25, repeat: Infinity, ease: "linear" }
           }}
-          className="absolute top-1/2 -right-40 w-[500px] h-[500px] border border-accent/20 rounded-[40%] opacity-30" 
+          className="absolute top-1/2 -right-40 w-[500px] h-[500px] border border-accent/10 rounded-[40%] opacity-30" 
         />
       </div>
       
@@ -77,7 +77,7 @@ export default function Team() {
           >
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">Our Team</span>
           </motion.div>
-          <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Led by Industry Professionals</h3>
+          <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Led by Experienced Professionals</h3>
           <p className="text-gray-400 text-lg">
             Our team brings together institutional-grade rigor from Big-4 and top-tier advisory backgrounds.
           </p>
@@ -100,14 +100,14 @@ export default function Team() {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 ${index < 2 ? 'object-[center_bottom]' : ''}`}
                   />
                 </div>
                 <CardHeader className="pb-2 relative z-20">
                   <div className="flex justify-between items-start gap-2">
                     <CardTitle className="text-lg font-serif text-white group-hover:text-accent transition-colors duration-300">{member.name}</CardTitle>
                     {member.linkedin && (
-                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors mt-1.5">
                         <Linkedin size={16} />
                       </a>
                     )}

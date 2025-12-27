@@ -46,23 +46,23 @@ export default function Testimonials() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-4 flex items-stretch">
               {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/2">
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3 flex">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="h-full"
+                    className="h-full w-full"
                   >
-                    <Card className="h-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-sm bg-secondary/20">
-                      <CardContent className="p-8">
-                        <p className="text-muted-foreground mb-6 text-base leading-relaxed italic">
+                    <Card className="h-full border border-gray-200 shadow-sm hover:shadow-md transition-shadow duration-300 rounded-sm bg-secondary/20 flex flex-col">
+                      <CardContent className="p-8 flex flex-col h-full">
+                        <p className="text-muted-foreground mb-6 text-base leading-relaxed italic flex-grow">
                           "{testimonial.content}"
                         </p>
                         
-                        <div className="border-t border-gray-100 pt-4 mt-auto">
+                        <div className="border-t border-gray-100 pt-4 mt-auto min-h-[4.5rem] flex flex-col justify-end">
                           <p className="font-semibold text-primary text-sm">{testimonial.name}</p>
                           <p className="text-xs text-muted-foreground mt-1">{testimonial.title}</p>
                         </div>

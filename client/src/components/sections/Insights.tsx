@@ -33,23 +33,23 @@ export default function Insights() {
           animate={{ 
             x: [0, 50, 0],
             y: [0, -30, 0],
-            opacity: [0.05, 0.08, 0.05]
+            opacity: [0.1, 0.15, 0.1]
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-24 left-1/4 w-[600px] h-[600px] bg-accent/20 rounded-full blur-[120px]" 
+          className="absolute -top-24 left-1/4 w-[600px] h-[600px] bg-accent/30 rounded-full blur-[120px]" 
         />
         <motion.div 
           animate={{ 
             x: [0, -40, 0],
             y: [0, 60, 0],
-            opacity: [0.03, 0.06, 0.03]
+            opacity: [0.08, 0.12, 0.08]
           }}
           transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/40 rounded-full blur-[100px]" 
+          className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/60 rounded-full blur-[100px]" 
         />
         
         {/* Subtle SVG lines */}
-        <svg className="absolute inset-0 w-full h-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
+        <svg className="absolute inset-0 w-full h-full opacity-[0.08]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="diagonal-lines" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
               <line x1="0" y1="0" x2="0" y2="40" stroke="white" strokeWidth="1" />

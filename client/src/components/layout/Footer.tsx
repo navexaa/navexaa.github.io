@@ -1,6 +1,5 @@
 import { Linkedin, Instagram, Phone, Mail, MapPin } from "lucide-react";
-import { motion } from "framer-motion";
-import whiteLogo from "@assets/Navexaa_logo_design_Transparent_White_1766580087033.png";
+import goldenLogo from "@assets/Navexaa_logo_design_Transparent_Golden_colour_1766821629891.png";
 
 export default function Footer() {
   return (
@@ -16,10 +15,9 @@ export default function Footer() {
           {/* Column 1 - Logo */}
           <div className="flex flex-col items-start">
             <img 
-              src={whiteLogo} 
+              src={goldenLogo} 
               alt="Navexaa" 
-              className="h-16 mb-6 grayscale brightness-0 invert-[.6] sepia-[.4] saturate-[4] hue-rotate-[5deg]"
-              style={{ filter: 'brightness(0) saturate(100%) invert(73%) sepia(16%) saturate(1054%) hue-rotate(3deg) brightness(89%) contrast(85%)' }}
+              className="h-10 mb-6 object-contain"
             />
           </div>
 
@@ -57,7 +55,7 @@ export default function Footer() {
                 className="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-3"
               >
                 <Phone size={18} className="text-accent" />
-                +91-96509000443 / +91-9910311681
+                +91-9650900443 / +91-9910311681
               </a>
               <a 
                 href="mailto:info@navexaa.com" 
@@ -73,7 +71,14 @@ export default function Footer() {
           <div>
             <h4 className="font-serif font-bold text-lg text-accent mb-6">Address</h4>
             <div className="flex items-start gap-3">
-              <MapPin size={18} className="text-accent shrink-0 mt-1" />
+              <a 
+                href="https://share.google/rauIQyYjKD177v9MR" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-accent hover:text-white transition-colors shrink-0 mt-1"
+              >
+                <MapPin size={18} />
+              </a>
               <p className="text-gray-400 text-sm leading-relaxed">
                 310-311, 3rd Floor, Tower A, Nextra The Address,<br />
                 Mayur Vihar Extension, New Delhi - 110091
