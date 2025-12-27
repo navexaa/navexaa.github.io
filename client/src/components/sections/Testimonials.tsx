@@ -10,28 +10,19 @@ import {
 
 const testimonials = [
   {
-    name: "Rajesh Kumar",
-    title: "Founder & CEO, TechScale Ventures",
-    content: "Navexaa transformed our financial strategy from ad-hoc to structured. Their fractional CFO support was instrumental in helping us raise our Series A round. Highly recommended.",
-    rating: 5
+    name: "Neeraj Agarwal",
+    title: "Founder, Get Max Value & Scrapert",
+    content: "Navexaa helped us clearly structure our business, validate market opportunity, and build robust forecasts. Their work brought clarity and discipline to our pitch and strengthened our investor conversations.",
   },
   {
-    name: "Priya Sharma",
-    title: "Managing Director, Retail Innovations Ltd.",
-    content: "The team's process optimization work reduced our operational costs by 25% in just six months. They bring Big 4 rigor with a startup-friendly approach.",
-    rating: 5
+    name: "Palash Gupta",
+    title: "Founder, Naked Beans",
+    content: "They identified key manufacturing bottlenecks and introduced simple tracking tools. Their practical approach improved visibility over material usage and strengthened operational controls.",
   },
   {
-    name: "Aditya Patel",
-    title: "CFO, Manufacturing Excellence Co.",
-    content: "Working with Navexaa on our business valuation was a game-changer. Their financial modelling expertise and communication made a complex process straightforward.",
-    rating: 5
-  },
-  {
-    name: "Meera Singh",
-    title: "Co-founder, FinTech Collective",
-    content: "Their pitch deck creation and fundraising support helped us articulate our value proposition clearly. We closed our Series B with ease.",
-    rating: 5
+    name: "Samar Gupta",
+    title: "Founder, Fastech Stones",
+    content: "Navexaa designed practical inventory and finance processes suited to our operations. We gained clear visibility into stock movement, slow-moving items, and reordering levels, supported by a easy-to-use financial system.",
   }
 ];
 
@@ -51,7 +42,7 @@ export default function Testimonials() {
           <Carousel
             opts={{
               align: "start",
-              loop: true,
+              loop: false,
             }}
             className="w-full"
           >

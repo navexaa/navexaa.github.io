@@ -52,7 +52,8 @@ export default function Contact() {
           <h2 className="text-sm font-semibold tracking-widest text-accent uppercase mb-3">Get in Touch</h2>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">Let’s Start a Conversation</h3>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Ready to unlock value and drive growth? Contact us today to discuss how we can support your business goals.
+            Ready to unlock value and drive growth together?<br />
+            Contact us today to discuss how we can support your business goals
           </p>
         </div>
 
