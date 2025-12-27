@@ -76,6 +76,9 @@ export default function Insights() {
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">Our Insights</span>
           </motion.div>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">Expert Perspectives</h3>
+          <p className="text-gray-400 text-lg mb-8">
+            Actionable insights for founders, CXOs, and investors on scaling sustainable businesses.
+          </p>
           <div className="bg-white/5 border border-white/10 p-8 rounded-sm backdrop-blur-md">
             <p className="text-gray-300 text-lg mb-4">
               Our first set of articles will be published shortly.
