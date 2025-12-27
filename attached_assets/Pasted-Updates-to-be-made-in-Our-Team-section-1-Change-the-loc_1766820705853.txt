@@ -1,0 +1,56 @@
+Updates to be made in Our Team section
+1.	Change the location of Linkedin link to right alignment of the name. Keep the symbol only for Naman and Prerit only.
+2.	Shorten the bio of Naman Agrawal as follows
+Ex-Big 4 professional with over 7 years of diverse work-ex in consulting and financial advisory. Led engagements in areas like fundraising, finance transformation, due diligence, cost optimization, etc. for global clients in sectors like auto ancillary, hospitality, etc.
+3.	Update the bio of Prerit Goel as follows
+With over 6 years of work experience in Big 4 and domestic firm, he has led consultancy on GCC optimization & automation, Ind AS adoption and legal matters for global clients across sectors like fintech, OEMs, media, advertising, etc.
+4.	Update the third profile as follows
+Ravindra Kumar Agrawal
+Expert Advisor
+CA
+With over 30 years of experience, he has led finance function for one of the largest steel company and now running his own wealth management company. He has advised clients from various industries in matters related to corporate strategy, M&A and taxation. 
+5.	Update the third profile as follows
+Rajesh Kumar Goel
+Expert Advisor
+CA, LLB
+With over 35 years of work experience, he has led CA firm for more than 2 decades. He has vast experience in financing, advisory, taxation, and audits serving businesses across steel, engineering, Auto OEMs, pharma and jewellery sectors.
+6.	Update the profile photos as attached with respective names
+7.	Design elements in background are a bit too subtle, can we make it a little more visible.
+8.	Linkedin URL for Naman - https://www.linkedin.com/in/ca-naman-agrawal/
+9.	Linkedin URL for Prerit - https://www.linkedin.com/in/prerit-goel
+
+Updates to be made in Testimonials section
+1.	For now, keep only three testimonials and do not keep infinite loop in horizontal scroll.
+2.	Update in first testimonial
+“Navexaa helped us clearly structure our business, validate market opportunity, and build robust forecasts. Their work brought clarity and discipline to our pitch and strengthened our investor conversations.”
+Neeraj Agarwal
+Founder, Get Max Value & Scrapert
+3.	Update in second testimonial
+“They identified key manufacturing bottlenecks and introduced simple tracking tools. Their practical approach improved visibility over material usage and strengthened operational controls.”
+Palash Gupta
+Founder, Naked Beans
+4.	Update in third testimonial
+“Navexaa designed practical inventory and finance processes suited to our operations. We gained clear visibility into stock movement, slow-moving items, and reordering levels, supported by a easy-to-use financial system.”
+Samar Gupta
+Founder, Fastech Stones
+Updates to be made in Get in Touch section
+1.	The subtitle to be updated as follows
+Ready to unlock value and drive growth together? 
+Contact us today to discuss how we can support your business goals
+Updates to be made in Footer
+1.	Design the footer as 4 different columns in following order
+Navexaa logo
+Follow Us
+Contact Us
+Address
+2.	For Navexaa logo, use a bigger logo size and use the golden colour #C39E58
+3.	For follow us
+Linkedin link - https://www.linkedin.com/company/navexaa/	
+Instagram link - https://www.instagram.com/grow_with_navexaa/
+Keep the symbols as it is. Just use the above links to redirect.
+4.	For contact us
+Use phone icon as it is - +91-96509000443/+91-9910311681
+use mail icon as it is – info@navexaa.com
+5.	Add some subtle design elements in background of footer
+6.	Remove the line – “Collaborate. Execute. Move forward with confidence.”
+7.	In last line, remove privacy policy and terms of service for now.

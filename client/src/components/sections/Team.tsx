@@ -1,50 +1,50 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
-import namanImg from '@assets/generated_images/professional_portrait_of_naman_agrawal.png';
-import preritImg from '@assets/generated_images/professional_portrait_of_prerit_goel.png';
+import namanImg from '@assets/Naman_Agrawal_1766820822630.PNG';
+import preritImg from '@assets/Prerit_Goel_1766820806214.PNG';
 
 const teamMembers = [
   {
     name: "Naman Agrawal",
     role: "Partner",
     degree: "CA, CFA",
-    bio: "Ex-Big 4 professional with over 7 years of diverse work experience in consulting and financial advisory. Led multiple engagements in areas like fundraising, finance transformation, finance due diligence, cost optimization, etc. for global clients in sectors like auto ancillary, consumer durables, hospitality, etc.",
+    bio: "Ex-Big 4 professional with over 7 years of diverse work-ex in consulting and financial advisory. Led engagements in areas like fundraising, finance transformation, due diligence, cost optimization, etc. for global clients in sectors like auto ancillary, hospitality, etc.",
     image: namanImg,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/ca-naman-agrawal/"
   },
   {
     name: "Prerit Goel",
     role: "Partner",
     degree: "CA, LLB",
-    bio: "With over 6 years of work experience in Big 4 and domestic firm, he has led consultancy on GCC optimization & automation, Ind AS adoption and legal matters to clients across sectors like fintech, OEMs, media, advertising, etc.",
+    bio: "With over 6 years of work experience in Big 4 and domestic firm, he has led consultancy on GCC optimization & automation, Ind AS adoption and legal matters for global clients across sectors like fintech, OEMs, media, advertising, etc.",
     image: preritImg,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/prerit-goel/"
   },
   {
-    name: "Coming Soon",
-    role: "Leadership",
-    degree: "",
-    bio: "We are constantly expanding our leadership team with industry veterans and domain experts.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200&h=200",
-    linkedin: "#"
+    name: "Ravindra Kumar Agrawal",
+    role: "Expert Advisor",
+    degree: "CA",
+    bio: "With over 30 years of experience, he has led finance function for one of the largest steel company and now running his own wealth management company. He has advised clients from various industries in matters related to corporate strategy, M&A and taxation.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
+    linkedin: null
   },
   {
-    name: "Coming Soon",
-    role: "Leadership",
-    degree: "",
-    bio: "Join our mission to enable transformation and drive sustainable growth for businesses globally.",
+    name: "Rajesh Kumar Goel",
+    role: "Expert Advisor",
+    degree: "CA, LLB",
+    bio: "With over 35 years of work experience, he has led CA firm for more than 2 decades. He has vast experience in financing, advisory, taxation, and audits serving businesses across steel, engineering, Auto OEMs, pharma and jewellery sectors.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
-    linkedin: "#"
+    linkedin: null
   }
 ];
 
 export default function Team() {
   return (
     <section id="team" className="py-24 bg-primary text-white relative overflow-hidden">
-      {/* Background Design Elements */}
+      {/* Background Design Elements - Made More Visible */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 opacity-[0.05]" 
+        <div className="absolute inset-0 opacity-[0.1]" 
              style={{ 
                backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
                backgroundSize: '80px 80px',
@@ -56,14 +56,14 @@ export default function Team() {
             rotate: 360,
             transition: { duration: 20, repeat: Infinity, ease: "linear" }
           }}
-          className="absolute -top-20 -left-20 w-80 h-80 border border-white/5 rounded-full" 
+          className="absolute -top-20 -left-20 w-80 h-80 border border-white/10 rounded-full" 
         />
         <motion.div 
           animate={{ 
             rotate: -360,
             transition: { duration: 25, repeat: Infinity, ease: "linear" }
           }}
-          className="absolute top-1/2 -right-40 w-[500px] h-[500px] border border-accent/10 rounded-[40%] opacity-20" 
+          className="absolute top-1/2 -right-40 w-[500px] h-[500px] border border-accent/20 rounded-[40%] opacity-30" 
         />
       </div>
       
@@ -104,7 +104,14 @@ export default function Team() {
                   />
                 </div>
                 <CardHeader className="pb-2 relative z-20">
-                  <CardTitle className="text-lg font-serif text-white group-hover:text-accent transition-colors duration-300">{member.name}</CardTitle>
+                  <div className="flex justify-between items-start gap-2">
+                    <CardTitle className="text-lg font-serif text-white group-hover:text-accent transition-colors duration-300">{member.name}</CardTitle>
+                    {member.linkedin && (
+                      <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent transition-colors">
+                        <Linkedin size={16} />
+                      </a>
+                    )}
+                  </div>
                   <div className="flex flex-col gap-0.5 mt-1">
                     <p className="text-accent text-[10px] font-semibold uppercase tracking-widest">{member.role}</p>
                     {member.degree && <p className="text-gray-400 text-[10px] font-medium">{member.degree}</p>}
@@ -112,9 +119,6 @@ export default function Team() {
                 </CardHeader>
                 <CardContent className="relative z-20 flex-grow">
                   <p className="text-gray-400 text-xs mb-6 leading-relaxed line-clamp-[8]">{member.bio}</p>
-                  <a href={member.linkedin} className="absolute bottom-6 left-6 inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 text-gray-400 hover:text-accent hover:border-accent hover:bg-accent/10 transition-all duration-300">
-                    <Linkedin size={14} />
-                  </a>
                 </CardContent>
               </Card>
             </motion.div>
