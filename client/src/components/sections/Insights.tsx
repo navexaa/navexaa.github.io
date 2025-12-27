@@ -1,24 +1,32 @@
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Linkedin } from "lucide-react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const insights = [
+  // Placeholder insights for layout demonstration
   {
     title: "Navigating Growth-Stage Fundraising",
     category: "Fundraising",
-    date: "Dec 2025",
-    description: "Key strategies for startup founders to successfully navigate equity and debt fundraising in the current market environment."
+    date: "Coming Soon",
+    description: "Key strategies for startup founders to successfully navigate equity and debt fundraising."
   },
   {
     title: "The Role of a Fractional CFO",
     category: "Strategic Finance",
-    date: "Nov 2025",
+    date: "Coming Soon",
     description: "How growing SMEs can leverage senior financial leadership without the full-time overhead costs."
   },
   {
     title: "Maximizing Business Valuation",
     category: "Valuation",
-    date: "Oct 2025",
+    date: "Coming Soon",
     description: "Common pitfalls and best practices for preparing your company for a successful valuation exercise."
   }
 ];
@@ -28,7 +36,6 @@ export default function Insights() {
     <section id="insights" className="py-24 bg-[#081528] text-white relative overflow-hidden">
       {/* Dynamic Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Animated gradient orbs */}
         <motion.div 
           animate={{ 
             x: [0, 50, 0],
@@ -48,7 +55,6 @@ export default function Insights() {
           className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary/60 rounded-full blur-[100px]" 
         />
         
-        {/* Subtle SVG lines */}
         <svg className="absolute inset-0 w-full h-full opacity-[0.08]" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="diagonal-lines" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
@@ -70,40 +76,57 @@ export default function Insights() {
             <span className="text-xs font-semibold tracking-widest text-accent uppercase">Our Insights</span>
           </motion.div>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">Expert Perspectives</h3>
-          <p className="text-gray-400 text-lg">
-            Actionable insights for founders, CXOs, and investors on scaling sustainable businesses.
-          </p>
+          <div className="bg-white/5 border border-white/10 p-8 rounded-sm backdrop-blur-md">
+            <p className="text-gray-300 text-lg mb-4">
+              Our first set of articles will be published shortly.
+            </p>
+            <p className="text-gray-400 text-base flex items-center justify-center gap-2">
+              If you'd like to be notified when new articles are published, connect with us on 
+              <a 
+                href="https://www.linkedin.com/company/navexaa/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-accent hover:text-white transition-colors flex items-center gap-1 font-semibold"
+              >
+                LinkedIn <Linkedin size={16} />
+              </a>
+            </p>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {insights.map((insight, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-            >
-              <Card className="h-full border border-white/5 shadow-sm hover:shadow-[0_20px_50px_rgba(197,160,89,0.1)] hover:border-accent/30 transition-all duration-500 rounded-none bg-white/5 backdrop-blur-md overflow-hidden group cursor-pointer">
-                <CardHeader className="pb-2">
-                  <div className="flex justify-between items-center mb-6">
-                    <span className="px-2 py-1 bg-accent/10 border border-accent/20 text-[10px] font-bold text-accent uppercase tracking-widest rounded-sm">{insight.category}</span>
-                    <span className="text-[10px] text-gray-500 font-medium uppercase tracking-tighter">{insight.date}</span>
+        <div className="max-w-6xl mx-auto px-12 relative">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: false,
+            }}
+            className="w-full opacity-50 pointer-events-none grayscale"
+          >
+            <CarouselContent className="-ml-4">
+              {insights.map((insight, index) => (
+                <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="h-full">
+                    <Card className="h-full border border-white/5 shadow-sm rounded-none bg-white/5 backdrop-blur-md overflow-hidden opacity-40">
+                      <CardHeader className="pb-2">
+                        <div className="flex justify-between items-center mb-6">
+                          <span className="px-2 py-1 bg-accent/10 border border-accent/20 text-[10px] font-bold text-accent uppercase tracking-widest rounded-sm">{insight.category}</span>
+                          <span className="text-[10px] text-gray-500 font-medium uppercase tracking-tighter">{insight.date}</span>
+                        </div>
+                        <CardTitle className="text-xl font-serif text-white">
+                          <span className="leading-tight">{insight.title}</span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-gray-400 text-sm leading-relaxed mb-6">{insight.description}</p>
+                      </CardContent>
+                    </Card>
                   </div>
-                  <CardTitle className="text-xl font-serif text-white group-hover:text-accent transition-colors duration-300 flex items-start justify-between gap-4">
-                    <span className="leading-tight">{insight.title}</span>
-                    <div className="mt-1 w-8 h-8 rounded-full border border-white/10 flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-all duration-500">
-                      <ArrowUpRight className="h-4 w-4 shrink-0" />
-                    </div>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-6 group-hover:text-gray-300 transition-colors">{insight.description}</p>
-                  <div className="w-0 h-[1px] bg-accent group-hover:w-full transition-all duration-700" />
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="absolute -left-12 border-white/10 text-white/40" />
+            <CarouselNext className="absolute -right-12 border-white/10 text-white/40" />
+          </Carousel>
         </div>
       </div>
     </section>
