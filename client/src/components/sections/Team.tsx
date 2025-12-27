@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Linkedin } from "lucide-react";
 import namanImg from '@assets/Naman_Agrawal_1766822836976.PNG';
 import preritImg from '@assets/Prerit_Goel_1766822836976.PNG';
+import placeholderImg from '@assets/ChatGPT_Image_Dec_27,_2025,_09_50_11_PM_1766852542467.png';
 
 const teamMembers = [
   {
@@ -26,7 +27,7 @@ const teamMembers = [
     role: "Expert Advisor",
     degree: "CA",
     bio: "With over 30 years of experience, he has led finance function for one of the largest steel company and now running his own wealth management company. He has advised clients from various industries in matters related to corporate strategy, M&A and taxation.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200&h=200",
+    image: placeholderImg,
     linkedin: null
   },
   {
@@ -34,7 +35,7 @@ const teamMembers = [
     role: "Expert Advisor",
     degree: "CA, LLB",
     bio: "With over 35 years of work experience, he has led CA firm for more than 2 decades. He has vast experience in financing, advisory, taxation, and audits serving businesses across steel, engineering, Auto OEMs, pharma and jewellery sectors.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200",
+    image: placeholderImg,
     linkedin: null
   }
 ];
@@ -99,7 +100,7 @@ export default function Team() {
                   <img 
                     src={member.image} 
                     alt={member.name}
-                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 ${index < 2 ? 'object-top' : ''}`}
+                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 ${index < 2 ? 'object-top' : 'object-center'}`}
                   />
                 </div>
                 <CardHeader className="pb-2 relative z-20">
