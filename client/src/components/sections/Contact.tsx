@@ -38,42 +38,43 @@ export default function Contact() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-  try {
-    const body = new URLSearchParams({
-      name: values.name,
-      email: values.email,
-      phone: values.phone,
-      company: values.company || "",
-      message: values.message,
-    }).toString();
+    try {
+      // 1. We must match the keys EXACTLY to your Excel Headers (Capitalized)
+      const body = new URLSearchParams({
+        "Name": values.name,
+        "Email": values.email,
+        "Phone Number": values.phone, // Matches 'Phone Number' header
+        "Company": values.company || "",
+        "Message": values.message,
+      });
 
-    const response = await fetch(GOOGLE_SCRIPT_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body,
-    });
+      // 2. Perform the request
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors", // Crucial for Google Scripts to avoid CORS errors
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: body.toString(),
+      });
 
-    if (!response.ok) {
-      throw new Error("Submission failed");
+      // 3. Success Feedback
+      toast({
+        title: "Message Sent",
+        description: "Thank you for reaching out. We will get back to you shortly.",
+      });
+
+      form.reset();
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast({
+        title: "Submission failed",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
     }
-
-    toast({
-      title: "Message Sent",
-      description: "Thank you for reaching out. We will get back to you shortly.",
-    });
-
-    form.reset();
-  } catch (error) {
-    toast({
-      title: "Submission failed",
-      description: "Something went wrong. Please try again later.",
-      variant: "destructive",
-    });
   }
-}
-
+  
   return (
     <section id="contact" className="py-24 bg-white">
       <div className="container mx-auto px-6 max-w-5xl">
