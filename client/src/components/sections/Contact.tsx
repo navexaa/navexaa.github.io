@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwfo1gB0h78wH1L_wmStIlQuyb510H-9gTjQnBq6Pe9kzDSEoAfnbLXMUKE8pi988rP/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxNnQznD3Z8fHVyydg6GmZBUTs7d04bwHnTJ7wji_c3RiiRCIEKkLVlKHteY8Y-8Ddd/exec";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is required." }),
   email: z.string().email({ message: "Invalid email address." }),
@@ -39,21 +39,22 @@ export default function Contact() {
 
 async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // Use URLSearchParams for maximum compatibility with Google Apps Script
-      const params = new URLSearchParams();
-      params.append("Name", values.name);
-      params.append("Email", values.email);
-      params.append("Phone Number", values.phone);
-      params.append("Company", values.company || "");
-      params.append("Message", values.message);
+      // 1. Convert data to a URL format
+      const params = new URLSearchParams({
+        "Name": values.name,
+        "Email": values.email,
+        "Phone Number": values.phone,
+        "Company": values.company || "",
+        "Message": values.message,
+      });
 
-      await fetch(GOOGLE_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors", 
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: params.toString(),
+      // 2. Add the parameters directly to the URL string
+      const finalURL = `${GOOGLE_SCRIPT_URL}?${params.toString()}`;
+
+      // 3. Perform a GET request (this bypasses almost all CORS/Blocker issues)
+      await fetch(finalURL, {
+        method: "GET",
+        mode: "no-cors",
       });
 
       toast({
