@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxG7hcAl-aW-A2srUPag-g078HmbPRq7cvCkFt7q1AMx6H-bSf5RXTKylkfSnioUasR/exec";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is required." }),
   email: z.string().email({ message: "Invalid email address." }),
@@ -36,14 +37,42 @@ export default function Contact() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+  try {
+    const body = new URLSearchParams({
+      name: values.name,
+      email: values.email,
+      phone: values.phone,
+      company: values.company || "",
+      message: values.message,
+    }).toString();
+
+    const response = await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body,
+    });
+
+    if (!response.ok) {
+      throw new Error("Submission failed");
+    }
+
     toast({
       title: "Message Sent",
       description: "Thank you for reaching out. We will get back to you shortly.",
     });
+
     form.reset();
+  } catch (error) {
+    toast({
+      title: "Submission failed",
+      description: "Something went wrong. Please try again later.",
+      variant: "destructive",
+    });
   }
+}
 
   return (
     <section id="contact" className="py-24 bg-white">
