@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyH6MJq8jqwgPJ50JuaUJw-2SLAy4f5vgWOyXeiKyP82G6TY-7nvHcq1U0qgilSEsPD/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxUn1CIeAD5AJxR1os4K8aaQTxYnMMpC6Jhj2gqtXIJBGT5KEH1TCp-B4wnDeHc_ROj/exec";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is required." }),
   email: z.string().email({ message: "Invalid email address." }),
@@ -37,28 +37,24 @@ export default function Contact() {
     },
   });
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+ async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      // 1. We must match the keys EXACTLY to your Excel Headers (Capitalized)
-      const body = new URLSearchParams({
-        "Name": values.name,
-        "Email": values.email,
-        "Phone Number": values.phone, // Matches 'Phone Number' header
-        "Company": values.company || "",
-        "Message": values.message,
-      });
+      // 1. Using FormData is more reliable for Google Apps Script
+      const formData = new FormData();
+      formData.append("Name", values.name);
+      formData.append("Email", values.email);
+      formData.append("Phone Number", values.phone);
+      formData.append("Company", values.company || "");
+      formData.append("Message", values.message);
 
       // 2. Perform the request
       await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
-        mode: "no-cors", // Crucial for Google Scripts to avoid CORS errors
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: body.toString(),
+        mode: "no-cors", // Keeps it simple and avoids browser blocks
+        body: formData,  // Sending FormData directly
       });
 
-      // 3. Success Feedback
+      // 3. Feedback
       toast({
         title: "Message Sent",
         description: "Thank you for reaching out. We will get back to you shortly.",
