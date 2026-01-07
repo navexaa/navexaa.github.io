@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxG7hcAl-aW-A2srUPag-g078HmbPRq7cvCkFt7q1AMx6H-bSf5RXTKylkfSnioUasR/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyH6MJq8jqwgPJ50JuaUJw-2SLAy4f5vgWOyXeiKyP82G6TY-7nvHcq1U0qgilSEsPD/exec";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name is required." }),
   email: z.string().email({ message: "Invalid email address." }),
